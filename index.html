@@ -47,32 +47,7 @@
 }
     }
 
-    <script>
-  const weddingDate = new Date(2026, 6, 12, 18, 0, 0).getTime();
-
-  const countdown = setInterval(function () {
-
-    const now = new Date().getTime();
-    const distance = weddingDate - now;
-
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-    document.getElementById("days").innerHTML = days;
-    document.getElementById("hours").innerHTML = hours;
-    document.getElementById("minutes").innerHTML = minutes;
-    document.getElementById("seconds").innerHTML = seconds;
-
-    if (distance < 0) {
-      clearInterval(countdown);
-      document.getElementById("countdown").innerHTML =
-        "¡Llegó el gran día!";
-    }
-
-  }, 1000);
-</script>
+   
     body {
       background-color: #f8f4ee;
       color: #3b352f;
@@ -208,5 +183,32 @@ text-shadow: 0 3px 20px rgba(0,0,0,0.6);
 
   </section>
 
+   <script>
+  const weddingDate = new Date(2026, 6, 12, 18, 0, 0).getTime();
+
+  const countdown = setInterval(function () {
+
+    const now = new Date().getTime();
+    const distance = weddingDate - now;
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("days").innerHTML = days;
+    document.getElementById("hours").innerHTML = hours;
+    document.getElementById("minutes").innerHTML = minutes;
+    document.getElementById("seconds").innerHTML = seconds;
+
+    if (distance < 0) {
+      clearInterval(countdown);
+      document.getElementById("countdown").innerHTML =
+        "¡Llegó el gran día!";
+    }
+
+  }, 1000);
+</script>
+  
 </body>
 </html>
