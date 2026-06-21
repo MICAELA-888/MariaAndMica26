@@ -257,6 +257,48 @@ text-shadow: 0 3px 20px rgba(0,0,0,0.6);
   border-radius: 12px;
   box-shadow: 0 15px 35px rgba(0,0,0,0.12);
 }
+.event {
+  padding: 100px 20px;
+  background: #f8f4ee;
+}
+
+.event h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  margin-bottom: 50px;
+  color: #5a4638;
+}
+
+.event-grid {
+  display: grid;
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .event-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.event-card {
+  background: rgba(255,255,255,0.8);
+  border-radius: 24px;
+  padding: 40px 30px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+}
+
+.event-card h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #5a4638;
+}
+
+.event-card p {
+  line-height: 1.8;
+}
 </style>
 </head>
 <body>
@@ -330,7 +372,31 @@ text-shadow: 0 3px 20px rgba(0,0,0,0.6);
   >
 
 </section>
+<section id="evento" class="event">
 
+  <p class="section-subtitle">12 de julio de 2026</p>
+
+  <h2>Acompáñennos</h2>
+
+  <div class="event-grid">
+
+    <div class="event-card">
+      <h3>💍 Presencial</h3>
+      <p>
+        Compartiremos este día con un pequeño grupo de familiares y amigos que ya viven en Buenos Aires.
+      </p>
+    </div>
+
+    <div class="event-card">
+      <h3>💻 Virtual</h3>
+      <p>
+        Nuestra ceremonia también será transmitida en vivo para que quienes están en Bolivia y otras partes del mundo puedan acompañarnos.
+      </p>
+    </div>
+
+  </div>
+
+</section>
  
 </div>
 
