@@ -69,7 +69,7 @@ body {
 }
 
 .story-card {
-  max-width: 850px;
+  max-width: 720px;
   margin: 0 auto;
   background: rgba(255,255,255,0.75);
   backdrop-filter: blur(10px);
@@ -213,7 +213,41 @@ text-shadow: 0 3px 20px rgba(0,0,0,0.6);
       background-color: #b9a999;
       color: white;
     }
-  </style>
+.timeline {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 50px;
+}
+
+.stop {
+  width: 140px;
+  padding: 20px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+.stop span {
+  font-size: 1.8rem;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.stop h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+}
+
+.stop p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin: 0;
+} 
+</style>
 </head>
 <body>
 
@@ -275,7 +309,47 @@ text-shadow: 0 3px 20px rgba(0,0,0,0.6);
 <p>
   Hoy, desde Sucre hasta Buenos Aires, celebramos la historia que elegimos escribir cada día.
 </p>
+<p>
+  Hoy, desde Sucre hasta Buenos Aires, celebramos la historia que elegimos escribir cada día.
+</p>
 
+<div class="timeline">
+
+  <div class="stop">
+    <span>📍</span>
+    <h3>2006</h3>
+    <p>Nos conocimos</p>
+  </div>
+
+  <div class="stop">
+    <span>❤️</span>
+    <h3>2016</h3>
+    <p>Comenzó nuestra historia</p>
+  </div>
+
+  <div class="stop">
+    <span>👨‍👩‍👦</span>
+    <h3>2014</h3>
+    <p>Nuestra familia</p>
+  </div>
+
+  <div class="stop">
+    <span>🐾</span>
+    <h3>Lou</h3>
+    <p>Siempre con nosotras</p>
+  </div>
+
+  <div class="stop">
+    <span>💍</span>
+    <h3>2026</h3>
+    <p>Buenos Aires</p>
+  </div>
+
+</div>
+
+</div>
+
+</section>
   </div>
 
 </section>
