@@ -496,6 +496,16 @@ text-shadow: 0 3px 20px rgba(0,0,0,0.6);
   line-height: 1.8;
   color: #3b352f;
 }
+  .fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 </style>
 </head>
 <body>
@@ -560,7 +570,7 @@ text-shadow: 0 3px 20px rgba(0,0,0,0.6);
 </p>
 
 
-<section id="historia" class="story">
+<section id="historia" class="story fade in">
 
   <img
     src="nuestra-ruta.png"
@@ -569,12 +579,12 @@ text-shadow: 0 3px 20px rgba(0,0,0,0.6);
   >
 
 </section>
-<section id="evento" class="event">
+<section id="evento" class="event fade in">
 
   <p class="section-subtitle">12 de julio de 2026</p>
 
   <h2>Acompáñennos</h2>
-<section id="detalles" class="details-section">
+<section id="detalles" class="details-section fade in">
 </section>
   <div class="event-grid">
 
@@ -595,7 +605,7 @@ text-shadow: 0 3px 20px rgba(0,0,0,0.6);
   </div>
 
 </section>
-    <section class="lou">
+    <section class="lou fade in">
 
   <div class="lou-card">
 
@@ -656,7 +666,7 @@ text-shadow: 0 3px 20px rgba(0,0,0,0.6);
 </div>
 
 </section>
-  <section class="dress-code">
+  <section class="dress-code fade in">
 
   <p class="section-subtitle">Dress code</p>
 
@@ -675,7 +685,7 @@ text-shadow: 0 3px 20px rgba(0,0,0,0.6);
   </p>
 
 </section>
-  <section id="rsvp" class="rsvp">
+  <section id="rsvp" class="rsvp fade in">
 
   <p class="section-subtitle">Confirma tu asistencia</p>
 
@@ -697,7 +707,7 @@ text-shadow: 0 3px 20px rgba(0,0,0,0.6);
 
 </section>
 
-<section class="final-message">
+<section class="final-message fade in">
 
   <div class="final-card">
 
@@ -748,6 +758,25 @@ text-shadow: 0 3px 20px rgba(0,0,0,0.6);
     }
 
   }, 1000);
+     const sections = document.querySelectorAll('.fade-in');
+
+const observer = new IntersectionObserver((entries) => {
+
+  entries.forEach(entry => {
+
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+
+  });
+
+}, {
+  threshold: 0.15
+});
+
+sections.forEach(section => {
+  observer.observe(section);
+});
 </script>
   
 </body>
