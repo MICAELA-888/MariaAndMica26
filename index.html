@@ -353,6 +353,41 @@ text-shadow: 0 3px 20px rgba(0,0,0,0.6);
 .secondary-button:hover {
   opacity: 0.9;
 }
+  .rsvp {
+  padding: 80px 20px;
+  text-align: center;
+  background: #f8f4ee;
+}
+
+.rsvp h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  margin: 20px 0;
+  color: #5a4638;
+}
+
+.rsvp-text {
+  max-width: 600px;
+  margin: 0 auto 40px;
+  line-height: 1.8;
+  color: #3b352f;
+}
+
+.rsvp-button {
+  display: inline-block;
+  padding: 16px 36px;
+  border-radius: 40px;
+  background: #25D366;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.rsvp-button:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
 </style>
 </head>
 <body>
@@ -467,7 +502,24 @@ text-shadow: 0 3px 20px rgba(0,0,0,0.6);
       <p>12 de julio de 2026</p>
       <p>Horario a confirmar</p>
     </div>
+<section id="rsvp" class="rsvp">
 
+  <p class="section-subtitle">Confirma tu asistencia</p>
+
+  <h2>¿Nos acompañas?</h2>
+
+  <p class="rsvp-text">
+    Nos ayudaría mucho que confirmes tu asistencia antes del 15 de junio de 2026.
+  </p>
+
+  <a
+    href="https://wa.me/59167633998?text=Hola%20Micaela%20y%20Mar%C3%ADa,%20queremos%20confirmar%20nuestra%20asistencia%20a%20su%20boda.%20%E2%9D%A4%EF%B8%8F"
+    target="_blank"
+    class="rsvp-button">
+    Confirmar por WhatsApp
+  </a>
+
+</section>
     <div class="detail-card">
       <h3>💻 Transmisión en vivo</h3>
       <p>
