@@ -534,6 +534,23 @@ text-shadow: 0 3px 20px rgba(0,0,0,0.6);
 .language-switch a:hover {
   opacity: 0.7;
 }
+  .maps-button{
+    display:inline-block;
+    margin-top:25px;
+    padding:14px 28px;
+
+    background:#8a5a44;      /* más oscuro que el otro botón */
+    color:white;
+
+    text-decoration:none;
+    border-radius:30px;
+
+    transition:0.3s;
+}
+
+.maps-button:hover{
+    background:#744836;
+}
 </style>
 </head>
 <body>
@@ -673,17 +690,23 @@ text-shadow: 0 3px 20px rgba(0,0,0,0.6);
 
   <div class="details-grid">
 
-   <p>
+  <div class="detail-card">
+
+  <h3>📍 Dirección</h3>
+
+  <p>
+    Av. Uruguay 753<br>
+    Buenos Aires, Argentina
+  </p>
+
   <a
     href="https://maps.google.com/?q=Av.+Uruguay+753,+Buenos+Aires,+Argentina"
     target="_blank"
-    class="secondary-button">
-    Dirección
-    Uruguay 753
-    
-    📍 Abrir en Google Maps
+    class="maps-button">
+    Abrir en Google Maps
   </a>
-</p>
+
+</div>
 
     <div class="detail-card">
       <h3>🕒 Hora</h3>
